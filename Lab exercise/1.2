@@ -1,0 +1,22 @@
+#include <iostream> // For input and output
+#include <string>   // To use the string data type
+using namespace std;
+
+int main()
+{
+    string name; // Variable to store the user's name
+    int age;     // Variable to store the user's age
+    
+    // Ask for user's name
+    cout << "Enter your name: ";
+    cin >> name; // Use getline to read full name (with spaces)
+    
+    // Ask for user's age
+    cout << "Enter your age: ";
+    cin >> age;
+    
+    // Display a personalized greeting
+    cout << "Hello, " << name << "! You are " << age << " years old.";
+    
+    return 0;
+}
