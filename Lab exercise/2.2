@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // IMPLICIT TYPE CONVERSION
+    int intVal = 42;
+    double doubleVal;
+    // Implicit conversion from int to double
+    doubleVal = intVal;
+    cout << "Implicit Conversion:" << endl;
+    cout << "intVal (int): " << intVal << endl;
+    cout << "doubleVal (double, after assigning intVal): " << doubleVal << endl;
+    // EXPLICIT TYPE CONVERSION
+    double originalDouble = 3.14159;
+    // Explicit conversion double to int
+    int intFromDouble1 = (int)originalDouble;
+    // Explicit conversion double to int
+    int intFromDouble2 = static_cast<int>(originalDouble);
+    cout << "\nExplicit Conversion:" << endl;
+    cout << "originalDouble (double): " << originalDouble << endl;
+    cout << "intFromDouble1 (C-style cast): " << intFromDouble1 << endl;
+    cout << "intFromDouble2 (static_cast): " << intFromDouble2 << endl;
+
+    return 0;
+}
