@@ -1,0 +1,77 @@
+#include <iostream>
+using namespace std;
+
+// Base class
+class Person
+{
+    public:
+    
+    string name;
+    int age;
+    void getDetails()
+    {
+        cout << "Enter name: ";
+        cin >> name;
+        cout << "Enter age: ";
+        cin >> age;
+    }
+    void showDetails()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+};
+
+// Derived class
+class Student : public Person
+{
+    public:
+    
+    string studentID;
+    void getStudentDetails()
+    {
+        getDetails(); // reuse class
+        cout << "Enter student ID: ";
+        cin >> studentID;
+    }
+    void showStudentDetails()
+    {
+        cout << "\n--- Student Details ---\n";
+        showDetails(); // reuse class
+        cout << "Student ID: " << studentID << endl
+             << endl;
+    }
+};
+
+// Derived class
+class Teacher : public Person
+{
+    public:
+    
+    string subject;
+    void getTeacherDetails()
+    {
+        getDetails(); // reuse class
+        cout << "Enter subject: ";
+        cin >> subject;
+    }
+    void showTeacherDetails()
+    {
+        cout << "\n--- Teacher Details ---\n";
+        showDetails(); // reuse class
+        cout << "Subject: " << subject << endl;
+    }
+};
+
+// Main function
+int main()
+{
+    Student s;
+    Teacher t;
+    s.getStudentDetails();
+    s.showStudentDetails();
+    t.getTeacherDetails();
+    t.showTeacherDetails();
+
+    return 0;
+}
