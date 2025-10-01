@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+class BankAccount
+{
+    private:
+    double balance; // private data member
+    
+    public:
+    
+    // Constructor
+    BankAccount(double initialBalance)
+    {
+        if (initialBalance >= 0)
+            balance = initialBalance;
+        else
+            balance = 0;
+    }
+    
+    // Deposit function
+    void deposit(double amount)
+    {
+        if (amount > 0)
+        {
+            balance += amount;
+            cout << "Deposited: " << amount << endl;
+        }
+        else
+        {
+            cout << "Invalid deposit amount" << endl;
+        }
+    }
+    
+    // Withdraw function
+    void withdraw(double amount)
+    {
+        if (amount > 0 && amount <= balance)
+        {
+            balance -= amount;
+            cout << "Withdrew: " << amount << endl;
+        }
+        else
+        {
+            cout << "Invalid or insufficient balance" << endl;
+        }
+    }
+    
+    // Function to get current balance
+    double getBalance()
+    {
+        return balance;
+    }
+};
+
+int main()
+{
+    BankAccount account(1000); // Create account with initial balance
+    account.deposit(500);
+    account.withdraw(200);
+    cout << "Current Balance: " << account.getBalance() << endl;
+    return 0;
+}
