@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cstdlib> // For rand() and srand()
+#include <ctime>   // For time()
+using namespace std;
+
+int main()
+{
+    int randomNumber, guess;
+    // Seed the random number generator
+    srand(time(0));
+    // Generate random number between 1 and 100
+    randomNumber = rand() % 100 + 1;
+    cout << "Guess the number (between 1 and 100): ";
+    // Loop until the user guesses correctly
+    while (true)
+    {
+        cin >> guess;
+        if (guess < 1 || guess > 100)
+        {
+            cout << "Please enter a number between 1 and 100." << endl;
+        }
+        else if (guess < randomNumber)
+        {
+            cout << "Too low. Try again: ";
+        }
+        else if (guess > randomNumber)
+        {
+            cout << "Too high. Try again: ";
+        }
+        else
+        {
+            cout << "Congratulations! You guessed the correct number: " << randomNumber << endl;
+            break; // loop exit
+        }
+    }
+    return 0;
+}
