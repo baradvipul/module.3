@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, sum = 0;
+    float average;
+    int numbers[100];
+    cout << "How many numbers? ";
+    cin >> n;
+    cout << "Enter the numbers:\n";
+    
+    for (int i = 0; i < n; i++)
+    {
+        cin >> numbers[i];
+        sum += numbers[i];
+    }
+    
+    average = (float)sum / n;
+    cout << "Sum = " << sum << endl;
+    cout << "Average = " << average << endl;
+    return 0;
+}
