@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Constant
+    const float PI = 3.14;
+    // Variables
+    int age = 20;
+    float height = 5.6;
+    double radius = 3.0;
+    char grade = 'A';
+    bool passed = true;
+    // Operations
+    double area = PI * radius * radius;
+    // Output
+    cout << "Age: " << age << endl;
+    cout << "Height: " << height << " feet" << endl;
+    cout << "Grade: " << grade << endl;
+    cout << "Passed: " << (passed ? "Yes" : "No") << endl;
+    cout << "Radius: " << radius << endl;
+    cout << "Area of Circle: " << area << endl;
+    cout << "Value of PI: " << PI << endl;
+    return 0;
+}
