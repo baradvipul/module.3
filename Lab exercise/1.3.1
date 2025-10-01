@@ -1,0 +1,24 @@
+// POP
+#include <iostream>
+using namespace std;
+
+// Function to calculate area
+float findArea(float length, float width)
+{
+    return length * width;
+}
+
+int main()
+{
+    float length, width, area;
+    // Input
+    cout << "Enter length: ";
+    cin >> length;
+    cout << "Enter width: ";
+    cin >> width;
+    // Calculate area
+    area = findArea(length, width);
+    // Output
+    cout << "Area of rectangle = " << area << endl;
+    return 0;
+}
