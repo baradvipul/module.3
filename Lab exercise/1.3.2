@@ -1,0 +1,27 @@
+// OOP
+#include <iostream>
+using namespace std;
+
+// Class definition
+class Rectangle
+{
+public:
+    // Function to calculate area
+    float getArea(float l, float w)
+    {
+        return l * w;
+    }
+};
+
+int main()
+{
+    float l, w;
+    Rectangle rect;
+    // Input
+    cout << "Enter length: ";
+    cin >> l;
+    cout << "Enter width: ";
+    cin >> w;
+    cout << "Area of rectangle = " << rect.getArea(l, w) << endl;
+    return 0;
+}
